@@ -48,6 +48,7 @@ export default function Home() {
                 style={{ height: 180, width: 180 }}
                 width={400}
                 height={400}
+                loading='lazy'
               />
               <h3>{user.name}</h3>
             </div>
