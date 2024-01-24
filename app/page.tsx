@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <main style={{ maxWidth: 1200, marginInline: "auto", padding: 20 }}>
-      {/* <div style={{ marginBottom: "4rem", textAlign: "center" }}>
+      <div style={{ marginBottom: "4rem", textAlign: "center" }}>
         <h4 style={{ marginBottom: 16 }}>{count}</h4>
         <button onClick={() => dispatch(increment())}>increment</button>
         <button
@@ -22,7 +22,7 @@ export default function Home() {
           decrement
         </button>
         <button onClick={() => dispatch(reset())}>reset</button>
-      </div> */}
+      </div>
 
       {error ? (
         <p>Oh no, there was an error</p>
