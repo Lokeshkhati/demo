@@ -1,11 +1,24 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
     images: {
         domains: ['robohash.org']
-    }
-}
+    },
+    webpack: (cfg) => {
+        cfg.module.rules.push({
+            test: /\.md$/,
+            loader: 'frontmatter-markdown-loader',
+        });
+        return cfg;
+    },
+};
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: process.env.ANALYZE === 'true',
-})
-module.exports = withBundleAnalyzer(nextConfig)
+/** @type {import('next').NextConfig} */
+// const nextConfig = {
+//     images: {
+//         domains: ['robohash.org']
+//     }
+// }
+
+// const withBundleAnalyzer = require('@next/bundle-analyzer')({
+//     enabled: process.env.ANALYZE === 'true',
+// })
+// module.exports = withBundleAnalyzer(nextConfig)
