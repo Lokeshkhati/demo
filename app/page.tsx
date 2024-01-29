@@ -14,7 +14,8 @@ export default function Home() {
   return (
     <main style={{ maxWidth: 1200, marginInline: "auto", padding: 20 }}>
 
-      <h1>This is heading</h1>
+      <h1 className='text-green-500'>This is heading</h1>
+      <h2>This is heading2</h2>
       {error ? (
         <p>Oh no, there was an error</p>
       ) : isLoading || isFetching ? (
